@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { boolean } from "webidl-conversions";
 
 const userSchema = new mongoose.Schema({
     email: {
@@ -33,3 +32,4 @@ const userSchema = new mongoose.Schema({
     verificationTokenExpiresAt: Date,
 }, {timestamps: true});
 
+export const User = mongoose.model('User', userSchema);
